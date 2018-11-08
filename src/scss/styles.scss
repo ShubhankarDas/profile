@@ -1,0 +1,57 @@
+/* ------ Global -------- */
+@import './vars';
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html{
+  font-family: Circular Std Book,
+  sans-serif;
+  font-weight: 100;
+}
+
+body{
+  width: 60%;
+  margin: auto;
+}
+
+.blue {
+  color: $accent-blue;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 400;
+  color: $bold;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+  color:$bold;
+}
+
+h5 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: $bold;
+}
+p{
+  color: $light-grey;
+  opacity: 0.8;
+  font-weight: 100;
+  margin-top: 20px;
+  font-size: 20px;
+}

@@ -1,0 +1,25 @@
+@import '../../scss/vars';
+
+.skills{
+  text-align: center;
+  margin-bottom: 20em;
+}
+.skills p{
+  margin-bottom: 30px;
+}
+.skills i {
+  width: 40px;
+  margin: 0px 15px;
+  opacity: 0.4;
+  transition: all .3s;
+}
+.programs{
+  font-size: 22px;
+}
+
+.programs i:hover{
+  transform: scale(1.2);
+  opacity: 1;
+  cursor: pointer;
+  color: $accent-blue;
+}

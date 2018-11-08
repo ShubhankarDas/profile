@@ -1,0 +1,36 @@
+/* ------ nav -------- */
+@import '../../scss/vars';
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.contactMe,
+.navIcons {
+  flex: 1;
+}
+
+.navIcons {
+  text-align: right;
+}
+
+.navIcons a,
+.contactMe a{
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+.navIcons a {
+  margin-left: 40px;
+}
+
+.contactMe a {
+  color: $accent-blue;
+  text-decoration: none;
+}
+
+.navIcons a:hover{
+  cursor: pointer;
+  color: $accent-blue;
+}
