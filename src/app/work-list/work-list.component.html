@@ -1,3 +1,14 @@
-<p>
-  work-list works!
-</p>
+<div class="work-item-wrapper">
+  <div *ngFor="let item of workItems" class="work-item-container">
+    <div class="work-text">
+      <h1>{{item.title}}</h1>
+      <a style="text-decoration: none" href="#">
+        <h5 class="underline">View project</h5>
+      </a>
+      <!-- <div class="underline"></div> -->
+    </div>
+    <ul class="work-item-link">
+    </ul>
+<img class="work-image" src={{item.img}} alt="Convertfly">
+  </div>
+</div>

@@ -6,7 +6,6 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkListComponent } from './work-list/work-list.component';
-import { WorkItemComponent } from './work-item/work-item.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,7 @@ import { WorkItemComponent } from './work-item/work-item.component';
     LandingComponent,
     HeaderComponent,
     SkillsComponent,
-    WorkListComponent,
-    WorkItemComponent
+    WorkListComponent
   ],
   imports: [
     BrowserModule,
