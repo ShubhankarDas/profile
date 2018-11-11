@@ -1,7 +1,7 @@
 @import '../../scss/vars';
 
 .landing{
-  height: 100vh;
+  height: calc(100vh -  100px);
   position: relative;
 }
 .landing-wrapper{
@@ -34,7 +34,7 @@ ul{
 
 .scroll{
   position: absolute;
-  bottom: 180px;
+  bottom: 100px;
   left:0;
   cursor: pointer;
   right:0;
