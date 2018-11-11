@@ -12,11 +12,13 @@ export class WorkListComponent implements OnInit {
     },
     {
       title: 'Visualgator',
-      img: '../../assets/images/convertfly-home.png'
+      img: '../../assets/images/Editor.png',
+      imgClass:'img-shadow'
     },
     {
       title: 'SkillsAlpha',
-      img: '../../assets/images/skillsalpha.png'
+      img: '../../assets/images/skillsalpha.png',
+      imgClass: 'img-shadow'
     },
     {
       title: 'Yoola App',
