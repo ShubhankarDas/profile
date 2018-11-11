@@ -26,6 +26,10 @@
   margin-left: 40px;
 }
 
+.navIcons a i{
+  padding: 3px;
+}
+
 .contactMe a {
   color: $accent-blue;
   text-decoration: none;
@@ -33,5 +37,5 @@
 
 .navIcons a:hover{
   cursor: pointer;
-  color: $accent-blue;
+  color:white;
 }
