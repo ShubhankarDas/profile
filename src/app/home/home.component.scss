@@ -37,11 +37,33 @@
 }
 
 .scroll-container {
-  position: absolute;
+  position: fixed;
   width: 20px;
-  height: 100px;
+  list-style-type: none;
   right: 80px;
   top: 50%;
   margin-top: -50px;
-  background-color: $light-grey;
+
+  .dot{
+    cursor: pointer;
+    width:4px;
+    height: 4px;
+    background-color: $light-grey;
+    border-radius: 50%;
+    padding: 1px;
+    margin: 8px auto;
+  }
+
+  .selected {
+    width:8px;
+    height: 8px;
+    background-color: $accent-blue;
+  }
+}
+
+.dot{
+  &:hover {
+    min-width: 6px;
+    min-height: 6px;
+  }
 }

@@ -8,7 +8,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkListComponent } from './work-list/work-list.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { SideTabComponent } from './side-tab/side-tab.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component'
     LandingComponent,
     HeaderComponent,
     SkillsComponent,
-    WorkListComponent
+    WorkListComponent,
+    SideTabComponent
   ],
   imports: [
     BrowserModule,

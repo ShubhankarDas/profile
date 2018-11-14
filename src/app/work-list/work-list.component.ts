@@ -17,12 +17,13 @@ export class WorkListComponent implements OnInit {
     },
     {
       title: 'SkillsAlpha',
-      img: '../../assets/images/skillsalpha.png',
+      img: '../../assets/images/cover-desktop.png',
       imgClass: 'img-shadow'
     },
     {
       title: 'Yoola App',
-      img: '../../assets/images/convertfly-home.png'
+      img: '../../assets/images/cover.png',
+      imgClass: 'img-shadow'
     }
   ];
 
