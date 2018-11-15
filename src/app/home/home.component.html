@@ -1,15 +1,16 @@
 <div class="main-wrapper">
-  <ul class='scroll-container'>
-    <li data-section-anchor="home" class="dot"> </li>
-    <li data-section-anchor="skills" class="dot"> </li>
-    <li data-section-anchor="exp_one" class="dot"> </li>
-    <li data-section-anchor="exp_two" class="dot"> </li>
-    <li data-section-anchor="exp_three" class="dot"> </li>
-    <li data-section-anchor="exp_four" class="dot"> </li>
+<div id="moon" class="background-moon moon-init"></div>
+  <ul id="side-bar" class='scroll-container hide-slide'>
+    <li (click)="updateSection('home')" data-section-anchor="home" class="dot selected"> </li>
+    <li (click)="updateSection('skills')" data-section-anchor="skills" class="dot"> </li>
+    <li (click)="updateSection('exp_one')" data-section-anchor="exp_one" class="dot"> </li>
+    <li (click)="updateSection('exp_two')" data-section-anchor="exp_two" class="dot"> </li>
+    <li (click)="updateSection('exp_three')" data-section-anchor="exp_three" class="dot"> </li>
+    <li (click)="updateSection('exp_four')" data-section-anchor="exp_four" class="dot"> </li>
   </ul>
   <div class="content">
     <header></header>
-    <landing></landing>
+    <landing (updateSideBar)="updateSection($event)"></landing>
     <skills></skills>
     <work-list></work-list>
   </div>

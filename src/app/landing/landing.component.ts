@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'landing',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+
+  @Output() updateSideBar = new EventEmitter()
+
   constructor() {}
-  scroll(el) {
-    let scrollTo = document.getElementById(el);
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+
+  scroll() {
+    this.updateSideBar.emit('skills')
   }
 
   ngOnInit() {}
