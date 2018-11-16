@@ -26,28 +26,32 @@ export class HomeComponent implements OnInit {
 
     if (section === 'skills') {
       moon.style.cssText = `
-      width: 100%;
+      width: 20px;
       height: 250px;
-      top: 300px;
-      right: 0;
+      top: 40%;
+      right: 80%;
       border-radius: 0;
     `;
     } else {
-      let anchor = Array.from(
-        document.getElementById('exp_one').parentNode.querySelectorAll('img')
-      )[0];
-      console.log(anchor.parentElement.getBoundingClientRect());
-      console.log(anchor.getBoundingClientRect());
+      let anchor = document.getElementById(section);
 
-      // moon.style.cssText = `
-      // width: 50px;
-      // height: 50px;
-      // top: 270px;
-      // right: 835px;
-      // border-radius: 50%;`;
+      console.log(anchor.getAttribute('data-anchor'));
 
-      // if (anchor.getAttribute('section-anchor') === 'left') {
-      // }
+      if (anchor.getAttribute('data-anchor') === 'left') {
+        moon.style.cssText = `
+          width: 50px;
+          height: 50px;
+          top: 30%;
+          right: 80%;
+          border-radius: 50%;`;
+      } else {
+        moon.style.cssText = `
+          width: 50px;
+          height: 50px;
+          top: 30%;
+          right: 15%;
+          border-radius: 50%;`;
+      }
     }
   }
 
@@ -74,6 +78,6 @@ export class HomeComponent implements OnInit {
     scrollTo.scrollIntoView({ behavior: 'smooth' });
 
     this.updateBar(section);
-    // this.updateMoon(section);
+    this.updateMoon(section);
   }
 }

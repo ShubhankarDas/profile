@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  // overflow: hidden;
+  overflow: hidden;
   position: relative;
   &:before {
     content: '';
@@ -46,37 +46,36 @@
 
 .scroll-container {
   position: fixed;
-  width: 20px;
   list-style-type: none;
   right: 80px;
   top: 50%;
-  margin-top: -50px;
+  margin-top: -10%;
   transition: all 0.4s;
 
-  .dot{
-    cursor: pointer;
-    width:4px;
-    height: 4px;
-    background-color: $light-grey;
-    border-radius: 50%;
-    padding: 1px;
-    margin: 8px auto;
-  }
+  // .dot{
+  //   cursor: pointer;
+  //   width:4px;
+  //   height: 4px;
+  //   background-color: $light-grey;
+  //   border-radius: 50%;
+  //   padding: 1px;
+  //   margin: 8px auto;
+  // }
 
-  .selected {
-    width:8px;
-    height: 8px;
-    background-color: $accent-blue;
-  }
+  // .selected {
+  //   width:8px;
+  //   height: 8px;
+  //   background-color: $accent-blue;
+  // }
 }
 
 .hide-slide {
   right: -40px;
 }
 
-.dot{
-  &:hover {
-    min-width: 6px;
-    min-height: 6px;
-  }
-}
+// .dot{
+//   &:hover {
+//     min-width: 6px;
+//     min-height: 6px;
+//   }
+// }
