@@ -51,10 +51,10 @@
   padding-left: 16px;
   z-index: 5;
   transition: all 0.4s;
-  transform: translateY(calc(100vh - 500px));
+  transform: translateY(calc(40vh));
 
   &:hover{
-    transform: translate(-120%, calc(100vh - 500px));
+    transform: translate(-120%, calc(40vh));
   }
 }
 
