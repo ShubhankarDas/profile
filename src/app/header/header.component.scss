@@ -31,8 +31,12 @@
 }
 
 .contactMe a {
-  color: $accent-blue;
+  color: $light-grey;
   text-decoration: none;
+
+  &:hover{
+    color:$accent-blue;
+  }
 }
 
 .navIcons a:hover{

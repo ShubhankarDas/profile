@@ -9,7 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkListComponent } from './work-list/work-list.component';
 import { HomeComponent } from './home/home.component';
-import { SideTabComponent } from './side-tab/side-tab.component'
+import { SideTabComponent } from './side-tab/side-tab.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SideTabComponent } from './side-tab/side-tab.component'
     HeaderComponent,
     SkillsComponent,
     WorkListComponent,
-    SideTabComponent
+    SideTabComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

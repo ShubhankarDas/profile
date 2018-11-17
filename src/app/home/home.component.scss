@@ -48,12 +48,13 @@
   position: fixed;
   list-style-type: none;
   right: -50px;
-  top: 50%;
-  margin-top: -6%;
+  padding-left: 16px;
+  z-index: 5;
   transition: all 0.4s;
+  transform: translateY(calc(100vh - 500px));
 
   &:hover{
-    transform: translateX(-120%);
+    transform: translate(-120%, calc(100vh - 500px));
   }
 }
 
@@ -99,6 +100,10 @@
 }
 
 .selected {
+
+  p{
+    color: $accent-blue;
+  }
   &:before {
     transform: scale(1.8);
     transform-origin: 40% 40%;

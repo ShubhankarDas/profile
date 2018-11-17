@@ -19,11 +19,15 @@
     <li (click)="updateSection('exp_four')" data-section-anchor="exp_four" class="dot">
       <p>Product 4</p>
     </li>
+    <!-- <li (click)="updateSection('footer')" data-section-anchor="footer" class="dot">
+      <p>Contact me</p>
+    </li> -->
   </ul>
   <div class="content">
     <header></header>
     <landing (updateSideBar)="updateSection($event)"></landing>
     <skills></skills>
     <work-list></work-list>
+    <!-- <app-footer></app-footer> -->
   </div>
 </div>

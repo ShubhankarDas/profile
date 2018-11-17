@@ -32,7 +32,10 @@ export class HomeComponent implements OnInit {
       right: 80%;
       border-radius: 0;
     `;
-    } else {
+    } else if(section === 'footer'){
+
+    }
+    else{
       let anchor = document.getElementById(section);
 
       console.log(anchor.getAttribute('data-anchor'));
