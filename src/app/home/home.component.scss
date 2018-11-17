@@ -47,35 +47,72 @@
 .scroll-container {
   position: fixed;
   list-style-type: none;
-  right: 80px;
+  right: -50px;
   top: 50%;
-  margin-top: -10%;
+  margin-top: -6%;
   transition: all 0.4s;
 
-  // .dot{
-  //   cursor: pointer;
-  //   width:4px;
-  //   height: 4px;
-  //   background-color: $light-grey;
-  //   border-radius: 50%;
-  //   padding: 1px;
-  //   margin: 8px auto;
-  // }
-
-  // .selected {
-  //   width:8px;
-  //   height: 8px;
-  //   background-color: $accent-blue;
-  // }
+  &:hover{
+    transform: translateX(-120%);
+  }
 }
 
 .hide-slide {
-  right: -40px;
+  z-index: -6;
+  transform: translateX(400%);
 }
 
-// .dot{
-//   &:hover {
-//     min-width: 6px;
-//     min-height: 6px;
-//   }
-// }
+.dot{
+  cursor: pointer;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    padding: 1px;
+    top: 50%;
+    margin-top: -2px;
+    margin-left: -2px;
+    background-color: $light-grey;
+    border-radius: 50%;
+  }
+  p{
+    left: 20px;
+    opacity: 0;
+    margin: 0;
+    transform: translate(100%);
+  }
+  &:hover {
+    &:before {
+      transform: scale(1.4);
+      transform-origin: 40% 40%;
+    }
+    p {
+      transition: all 0.4s;
+      transform: translate(30%);
+      opacity: 1;
+    }
+  }
+
+}
+
+.selected {
+  &:before {
+    transform: scale(1.8);
+    transform-origin: 40% 40%;
+    margin-top: -4px;
+    margin-left: -2px;
+    background-color: $accent-blue;
+  }
+  &:hover {
+    &:before{
+      transform: scale(1.8);
+      transform-origin: 40% 40%;
+      margin-top: -4px;
+      margin-left: -2px;
+      background-color: $accent-blue;
+    }
+  }
+}
