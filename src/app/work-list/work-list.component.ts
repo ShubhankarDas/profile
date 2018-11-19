@@ -10,27 +10,27 @@ export class WorkListComponent implements OnInit {
       id: 'exp_one',
       title: 'Convertfly',
       anchor: 'left',
-      img: '../../assets/images/convertfly-home.png'
+      img: '/assets/images/convertfly-home.png'
     },
     {
       id: 'exp_two',
       title: 'Visualgator',
       anchor: 'right',
-      img: '../../assets/images/Editor.png',
+      img: '/assets/images/Editor.png',
       imgClass: 'img-shadow'
     },
     {
       id: 'exp_three',
       title: 'SkillsAlpha',
       anchor: 'left',
-      img: '../../assets/images/cover-desktop.png',
+      img: '/assets/images/cover-desktop.png',
       imgClass: 'img-shadow'
     },
     {
       id: 'exp_four',
       title: 'Yoola App',
       anchor: 'right',
-      img: '../../assets/images/cover.png',
+      img: '/assets/images/cover.png',
       imgClass: 'img-shadow'
     }
   ];
