@@ -10,7 +10,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { WorkListComponent } from './work-list/work-list.component';
 import { HomeComponent } from './home/home.component';
 import { SideTabComponent } from './side-tab/side-tab.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { ProjectViewerComponent } from './project-viewer/project-viewer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component'
     SkillsComponent,
     WorkListComponent,
     SideTabComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -30,12 +32,14 @@ import { FooterComponent } from './footer/footer.component'
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'project/:projectName',
+        component: ProjectViewerComponent
       }
     ])
   ],
-  providers: [
-    Title
-  ],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

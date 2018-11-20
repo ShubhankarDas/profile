@@ -7,27 +7,27 @@ import { Component, OnInit, NgModule } from '@angular/core';
 export class WorkListComponent implements OnInit {
   workItems = [
     {
-      id: 'exp_one',
+      id: 'convertfly',
       title: 'Convertfly',
       anchor: 'left',
       img: '/assets/images/convertfly-home.png'
     },
     {
-      id: 'exp_two',
+      id: 'visualgator',
       title: 'Visualgator',
       anchor: 'right',
       img: '/assets/images/Editor.png',
       imgClass: 'img-shadow'
     },
     {
-      id: 'exp_three',
+      id: 'skillsalpha',
       title: 'SkillsAlpha',
       anchor: 'left',
       img: '/assets/images/cover-desktop.png',
       imgClass: 'img-shadow'
     },
     {
-      id: 'exp_four',
+      id: 'yoola',
       title: 'Yoola App',
       anchor: 'right',
       img: '/assets/images/cover.png',

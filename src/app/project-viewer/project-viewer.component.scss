@@ -1,0 +1,46 @@
+
+.project-wrapper{
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 1px 60px 90px rgba(0, 0, 0, 0.3);
+  padding-bottom: 40px;
+}
+
+.close{
+  position: fixed;
+  padding: 10px;
+  color: white;
+  margin: 20px;
+}
+
+.hero{
+  display: flex;
+  background-color: #354285;
+  width: 100%;
+  flex-direction: column;
+  height: 700px;
+  text-align: center;
+  margin-bottom: 200px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.hero-text{
+  color: white;
+  padding: 1.2em;
+}
+
+.hero-image{
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+
+  img{
+    margin-bottom: -200px;
+  }
+}
+
+.content-wrapper{
+  margin: 0 15% ;
+}
