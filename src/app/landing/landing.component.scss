@@ -54,6 +54,14 @@ ul{
   animation: scaling 1s infinite alternate;
 }
 
+.temp{
+  font-weight: 400;
+  line-height: 17px;
+  // margin-top: 20px;
+  font-size: 20px;
+  color: #838A93;
+}
+
 @keyframes  scaling {
   0% {
     transform: scale(1.0);

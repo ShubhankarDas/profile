@@ -2,6 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -26,18 +27,28 @@ import { ProjectViewerComponent } from './project-viewer/project-viewer.componen
     ProjectViewerComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'project/:projectName',
-        component: ProjectViewerComponent
-      }
-    ])
+    RouterModule.forRoot(
+      [
+        {
+          path: '',
+          component: HomeComponent,
+          data: {
+            state: 'home'
+          }
+        },
+        {
+          path: 'project/:projectName',
+          component: ProjectViewerComponent,
+          data: {
+            state: 'projectView'
+          }
+        }
+      ],
+      { scrollPositionRestoration: 'enabled' }
+    )
   ],
   providers: [Title],
   bootstrap: [AppComponent]

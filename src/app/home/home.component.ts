@@ -9,10 +9,6 @@ import { Title } from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
   constructor(private titleService: Title) {}
 
-  ngOnInit() {
-    this.titleService.setTitle('Shubhankar Das');
-  }
-
   updateMoon(section) {
     let moon = document.getElementById('moon');
 
@@ -32,10 +28,8 @@ export class HomeComponent implements OnInit {
       right: 80%;
       border-radius: 0;
     `;
-    } else if(section === 'footer'){
-
-    }
-    else{
+    } else if (section === 'footer') {
+    } else {
       let anchor = document.getElementById(section);
 
       console.log(anchor.getAttribute('data-anchor'));
@@ -82,5 +76,8 @@ export class HomeComponent implements OnInit {
 
     this.updateBar(section);
     this.updateMoon(section);
+  }
+  ngOnInit() {
+    this.titleService.setTitle('Shubhankar Das');
   }
 }
