@@ -10,59 +10,123 @@
         </div>
       </div>
       <div *ngSwitchCase="'convertfly'">
-        <div class="content-wrapper">
-          <h2>About</h2>
-          <p>
-            Convertfly is a Messenger marketing app built for Shopify. Convertfly’s main target audience consisted of
-            people who are not marketers but people selling stuff they craft (some do drop-shipping).
-          </p>
+        <div class="content">
+          <div class="para-wrapper">
+<h3>About</h3>
+<p>
+  Convertfly is a Messenger marketing app built for Shopify. Convertfly’s main target audience consisted of
+  people who are not marketers but people selling stuff they craft (some do drop-shipping).
+</p>
+          </div>
+
           <img src="/assets/images/convertfly-tools.png">
-          <h2>Code</h2>
-          <p>
-            For the purpose of rapid prototyping, code shareability, and testing, Zone features a full stack Javascript
-            codebase.
-          </p>
-          <h3>The Front-End</h3>
-          <p>
-            The front-end went through many stages of iterations. One of the largest changes during the prototyping phase
-            was the changing one of the campaigns.
-          </p>
+
+          <div class="para-wrapper">
+
+            <h3>Code</h3>
+            <p>
+              For the purpose of rapid prototyping, code shareability, and testing, Zone features a full stack Javascript
+              codebase.
+            </p>
+            <h4>The Front-End</h4>
+            <p>
+  The front-end went through many stages of iterations. One of the largest changes during the prototyping phase was deciding the UI components in our campaigns.
+            </p>
+            <h4>The Back-End</h4>
+            <p>
+  The back-end , which was written in NodeJs, handled most of the heavy data processing. Convertfly used Mongo (NoSql)
+  for storing data. There were multiple tasks/cron jobs to be run in back ground for each campaign and depending on the
+  work it had to access third party APIs such as Facebook and Shopify.
+            </p>
+          </div>
+
           <img src="/assets/images/tools-2.png">
-          <h2>Dev Stack</h2>
-          <p>Let's jump in — you’ve posted your books on Gumroad, held your breath while tweeting the link out, and
-            you're
-            seeing
-            sales come in from your audience. Now cue the celebratory dance in your computer chair. You log in to Gumroad
-            and
-            see
-            all of these new customers, but at this point, you're staring at your screen thinking...<br><br>
-            Who are my top customers?<br>
-            Which customers have spent the most?<br>
-            How many times has a certain customer purchased from me?<br><br>
-            The problem is that you can't answer any of these questions in the current design. It's simply a list of
-            purchases,
-            with no aggregated information about customers.
-          </p>
+
+          <div class="para-wrapper">
+            <p>
+  The most exciting and the challenging task during the creation was designing the data flow for each campaign with
+  keeping the cross-platform variables in mind.
+            </p>
+
+            <p>
+  Customer Feedback is a major part for the growth of any product. We spoke out to our existing customers about the
+  features we were planing to integrate.
+            </p>
+          </div>
           <img src="/assets/images/campaign-2.png">
+
+          <div class="para-wrapper">
+            <h3>Result</h3>
+            <p>
+              We on-boarded more than 1200 e-commerce stores who recovered $4,40,000+ in revenue.
+            </p>
+          </div>
           <img src="/assets/images/campaign-1.png">
         </div>
       </div>
       <div *ngSwitchCase="'visualgator'">
-        <div class="content-wrapper">
-          <h2>About</h2>
-          <p>
-            Convertfly is a Messenger marketing app built for Shopify. Convertfly’s main target audience consisted of
-            people who are not marketers but people selling stuff they craft (some do drop-shipping).
-          </p>
+        <div class="content">
+
+<div class="para-wrapper">
+  <h3>About</h3>
+  <p>
+    VisualGator is a visual review collector tool for an e-commerce platform called Shopify. VisualGator's goal was to collect photographs of customers showing off the product and give ratings.
+  </p>
+</div>
           <img class="img-shadow" src="/assets/images/Desktop.png">
+<div class="para-wrapper">
+
+  <h3>Dev stack</h3>
+  <p>
+    The front-end was written in Pug template and Saas for css pre-processor. <br>
+    The back-end had most of the work as it had to communicate with the Shopify api for orders and the product views. We used NodeJs for maintaining our back-end with MongoDb (NoSql) as our choice of database.
+  </p>
+</div>
+<img class="img-shadow" src="/assets/images/visualgator-moderation.png">
         </div>
       </div>
       <div *ngSwitchCase="'skillsalpha'">
-        <div class="content-wrapper">
-        </div>
+        <div class="content">
+<div class="para-wrapper">
+  <h3>About</h3>
+  <p>
+    Skillsalpha is a skilling tool for employees with integrated multiple course and a visual career path.
+  </p>
+</div>
+</div>
       </div>
       <div *ngSwitchCase="'yoola'">
-        <div class="content-wrapper">
+        <div class="content">
+<div class="para-wrapper">
+
+  <h3>About</h3>
+  <p>
+Yoola is an Android application which connects local vendors and consumers. Yoola shows vendors within 5km and can be
+sorted via their categories and rating. Consumer can start chatting with the vendor over Yoola without disclosing their
+identity. The user can also broadcast the requirement and let the vendor who has the item can message you back.
+</p>
+<h3>Problem trying to solve</h3>
+<p>
+It is very difficult for working people to get all the grocery items from the vendors. They also love the local vendors as they have already created a nice relation which gives them discounts on each purchase, but dont have time due their busy schedule. People go through a difficult time searching for a particular item, they end up going to all the stores near by. This cost the travel as well as time.
+</p>
+<p>
+Yoola does just that! Yoola you can get all the nearby stores and their location. If in doubt or hurry, Yoola will provide you the messaging platform for discussing with the vendor.
+</p>
+<h3>The Front-End</h3>
+<p>
+The Android UI designs had multiple iterations. After few months of the first launch we decided to relaunch it with a
+completely new design. Revamping all the modules with keeping its functionality and android limitations in mind at that
+moment was challenging. We used Material design system for the revamped application. Creating the Chat flow UX was very
+interesting and took most of the time in the entire process.
+</p>
+<h3>The Back-End</h3>
+<p>
+The back-end was written in asp.net and were used for crud operations on our MySql database.
+Whereas for messaging database we went Firebase for its real-time listeners on any data event for android devices. One
+of the challenges while designing and implementing the messaging architecture was its depth level structure of the
+database and queries needed to run smooth.
+</p>
+</div>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@
   box-shadow: 1px 60px 90px rgba(0, 0, 0, 0.3);
   padding-bottom: 40px;
 
-  h1,h2,h3{
+  h1,h2,h3,h4{
     color: #575d65;
   }
 
@@ -36,7 +36,7 @@
 .close{
   position: fixed;
   padding: 10px;
-  color: #838A93;
+  color: white;
   margin: 20px;
   transition: all 0.5s;
 
@@ -68,6 +68,10 @@
   display: flex;
   justify-content: center;
 
+  .pad{
+    max-width: 900px !important;
+  }
+
   img{
     height:100%;
     width: 100%;
@@ -80,8 +84,17 @@
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-.content-wrapper{
-  margin: 0 15%;
+.para-wrapper{
+  margin : 20px auto;
+  max-width: 700px;
+  padding: 20px;
+}
+.image-wrapper{
+  width: 100%;
+}
+
+.content{
+  margin: 0 20%;
 
   h2{
     margin-top: 40px;

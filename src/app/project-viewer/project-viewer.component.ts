@@ -21,21 +21,21 @@ export class ProjectViewerComponent implements OnInit {
       title: 'VisualGator',
       heroImage: 'assets/images/Editor.png',
       background: '#253756db',
-      class: 'img-shadow'
+      class: 'img-shadow pad'
     },
     skillsalpha: {
       id: 'skillsalpha',
       title: 'Skills Alpha',
-      heroImage: 'assets/images/Editor.png',
-      background: '#253756db',
-      class: 'img-shadow'
+      heroImage: 'assets/images/cover-desktop.png',
+      background: '#283e99',
+      class: 'img-shadow pad'
     },
     yoola: {
       id: 'yoola',
       title: 'Yoola',
-      heroImage: 'assets/images/Editor.png',
-      background: '#253756db',
-      class: 'img-shadow'
+      heroImage: 'assets/images/cover.png',
+      background: '#f15475',
+      class: 'img-shadow pad'
     }
   };
   project;
