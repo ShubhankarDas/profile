@@ -1,8 +1,8 @@
 <div class="project-container">
   <div class="project-wrapper">
-    <a class="close" routerLink="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+<a class="close" (click)="backClicked()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
     <div [ngSwitch]="projectName">
-      <div class="back-space" [style.background-color]="project.background"></div>
+      <!-- <div class="back-space" [style.background-color]="project.background"></div> -->
       <div class="hero">
         <h2 class="hero-text">{{ project.title }}</h2>
         <div class="hero-image">

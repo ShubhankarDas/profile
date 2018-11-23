@@ -1,6 +1,7 @@
 import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-project-viewer',
@@ -13,8 +14,8 @@ export class ProjectViewerComponent implements OnInit {
       id: 'convertfly',
       title: 'Convertfly',
       heroImage: '/assets/images/convertfly-home.png',
-      // background: '#354285'
-      background: '#e61758'
+      background: '#354285'
+      // background: '#e61758'
     },
     visualgator: {
       id: 'visaulgator',
@@ -41,7 +42,7 @@ export class ProjectViewerComponent implements OnInit {
   project;
   projectName;
 
-  constructor(private titleService: Title, private route: ActivatedRoute) {}
+  constructor(private titleService: Title, private route: ActivatedRoute, private _location: Location) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -49,5 +50,9 @@ export class ProjectViewerComponent implements OnInit {
       this.titleService.setTitle(this.projectDetails[this.projectName].title);
       this.project = this.projectDetails[this.projectName];
     });
+  }
+
+  backClicked() {
+    this._location.back();
   }
 }

@@ -46,71 +46,20 @@ const routerTransition = trigger('routerTransition', [
   ]),
 
   transition('home => projectView', [
-    query(':enter, :leave', style({ width: '100%', position: 'absolute' }), {
+    query(':enter, :leave', style({ width: '100%' }), {
       optional: true
     }),
-    query(
-      ':enter .hero',
-      style({ transform: 'translateY(40px)', opacity: '0' })
-    ),
-    query(':enter', style({ opacity: 0 })),
-    group([
-      query('#moon', [
-        style({ zIndex: 3 }),
-        animate(
-          '0.5s ease-in-out',
-          style({ opacity: 1, transform: 'scale(150)', zIndex: 3 })
-        )
-      ])
-    ]),
-    query(':leave #moon', style({ opacity: 0 })),
-    query(':enter', style({ opacity: 1 })),
-    group([
-      query(':enter .project-wrapper', style({ boxShadow: 'none' })),
-      query(':leave', style({ opacity: 0 })),
-      query(':enter .back-space', [
-        style({ transform: 'scale(2)', zIndex: 2, background: '#047bff' }),
-        animate('0.4s ease-in-out')
-      ])
-    ]),
-    query(
-      ':enter .hero',
-      [
-        animate(
-          '0.3s ease-in-out',
-          style({ transform: 'translateY(0px)', opacity: '1' })
-        )
-      ],
-      { optional: true }
-    )
+    query(':enter', style({opacity: 0})),
+    query(':leave', [
+      style({ opacity: 1 }),
+      animate('0.4s ease-in-out',style({opacity: 0, transform: 'translateY(30px)'}))])
   ]),
 
   transition('* => home', [
     query(':enter, :leave', style({ width: '100%', position: 'fixed' }), {
       optional: true
     }),
-    query('#moon', style({ transform: 'translate(300px, -300px) scale(0)' })),
-    query(
-      '.landing-left, .landing-right',
-      style({ opacity: 0, transform: 'translateY(30px)' })
-    ),
-    query('#moon', animate('0.4s ease-in-out')),
-    query(
-      '.landing-right',
-      animate(
-        '0.3s ease-in-out',
-        style({ opacity: 1, transform: 'translateY(0)' })
-      )
-    ),
-    group([
-      query(
-        '.landing-left',
-        animate(
-          '0.3s ease-in-out',
-          style({ opacity: 1, transform: 'translateY(0)' })
-        )
-      )
-    ])
+    query(':enter .landing', [style({opacity: 0, transform: 'translateY(40px)'}), animate('0.4s ease-in')])
   ])
 ]);
 
