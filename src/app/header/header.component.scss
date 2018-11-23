@@ -13,6 +13,8 @@
 
 .navIcons {
   text-align: right;
+      margin-right: 100px;
+
 }
 
 .navIcons a,
@@ -41,5 +43,5 @@
 
 .navIcons a:hover{
   cursor: pointer;
-  color:white;
+  color:$accent-blue;
 }

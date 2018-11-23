@@ -1,29 +1,113 @@
 <div class="main-wrapper">
-<div id="moon" class="background-moon moon-init"></div>
-  <ul id="side-bar" class='scroll-container hide-slide'>
-    <li (click)="updateSection('home')" data-section-anchor="home" class="dot selected">
-      <p>Home</p>
-    </li>
-    <li (click)="updateSection('skills')" data-section-anchor="skills" class="dot">
-      <p>Skills</p>
-    </li>
-    <li (click)="updateSection('convertfly')" data-section-anchor="convertfly" class="dot">
-      <p>Chapter 1</p>
-    </li>
-    <li (click)="updateSection('visualgator')" data-section-anchor="visualgator" class="dot">
-      <p>Chapter 2</p>
-    </li>
-    <li (click)="updateSection('skillsalpha')" data-section-anchor="skillsalpha" class="dot">
-      <p>Chapter 3</p>
-    </li>
-    <li (click)="updateSection('yoola')" data-section-anchor="yoola" class="dot">
-      <p>Chapter 4</p>
-    </li>
-  </ul>
-  <div class="content">
-    <header></header>
-    <landing (updateSideBar)="updateSection($event)"></landing>
-    <skills></skills>
-    <work-list></work-list>
+  <!-- <div id="moon" class="background-moon moon-init"></div> -->
+
+  <header></header>
+  <landing></landing>
+
+  <div class="self-info">
+    <div class=info-left>
+      <h4 class="desc">
+          I'm a Full-Stack developer based in India. I'm passionate about technology and on a journey to learn and shape meaningful products.
+        </h4>
+    </div>
+    <div class=info-right>
+      <img src="/assets/images/profile.png" width="300px">
+    </div>
+  </div>
+
+  <div class="work">
+    <h2>Work.</h2>
+    <div class="work-wrapper">
+      <div class="card">
+        <a routerLink="/project/convertfly">
+          <div class="card-img" style="background-image: url('/assets/images/convertfly.png')">
+          </div>
+          <div class="card-content">
+            <div class="card-tags">
+              <div class="card-tag">
+                NodeJs
+              </div>
+              <div class="card-tag">
+                Pug
+              </div>
+              <div class="card-tag">
+                MongoDb
+              </div>
+<div class="card-tag">
+  Saas
+</div>
+            </div>
+            <h4>Convertfly</h4>
+            <p>Messenger marketing app built for Shopify customers to increase their sales.</p>
+          </div>
+        </a>
+      </div>
+<div class="card">
+<a routerLink="/project/visualgator">
+    <div class="card-img" style="background-image: url('/assets/images/Editor.png')">
+    </div>
+    <div class="card-content">
+      <div class="card-tags">
+        <div class="card-tag">
+          NodeJs
+        </div>
+        <div class="card-tag">
+          Pug
+        </div>
+        <div class="card-tag">
+          MongoDb
+        </div>
+<div class="card-tag">
+  Saas
+</div>
+      </div>
+      <h4>Visualgator</h4>
+        <p>Visual review curator app for Shopify customers to get social proof.</p>
+    </div>
+  </a>
+</div>
+<div class="card">
+<a routerLink="/project/yoola">
+    <div class="card-img" style="background-image: url('/assets/images/cover.png')">
+    </div>
+    <div class="card-content">
+      <div class="card-tags">
+        <div class="card-tag">
+          .NET
+        </div>
+        <div class="card-tag">
+          android
+        </div>
+        <div class="card-tag">
+          firebase
+        </div>
+      </div>
+      <h4>Yoola</h4>
+      <p>Android application which connects local vendors and consumers.</p>
+    </div>
+  </a>
+</div>
+<div class="card">
+<a routerLink="/project/skillsalpha">
+    <div class="card-img" style="background-image: url('/assets/images/cover-desktop.png')">
+    </div>
+    <div class="card-content">
+      <div class="card-tags">
+        <div class="card-tag">
+          angular
+        </div>
+        <div class="card-tag">
+          java
+        </div>
+        <div class="card-tag">
+          Mysql
+        </div>
+      </div>
+      <h4>Skills Alpha</h4>
+      <p>Online skilling platform for self enhancement built for B2B domain.</p>
+    </div>
+  </a>
+</div>
+    </div>
   </div>
 </div>

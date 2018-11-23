@@ -94,11 +94,11 @@ const routerTransition = trigger('routerTransition', [
       '.landing-left, .landing-right',
       style({ opacity: 0, transform: 'translateY(30px)' })
     ),
-    query('#moon', animate('0.8s ease-in-out')),
+    query('#moon', animate('0.4s ease-in-out')),
     query(
       '.landing-right',
       animate(
-        '0.8s ease-in-out',
+        '0.3s ease-in-out',
         style({ opacity: 1, transform: 'translateY(0)' })
       )
     ),
@@ -106,7 +106,7 @@ const routerTransition = trigger('routerTransition', [
       query(
         '.landing-left',
         animate(
-          '0.5s ease-in-out',
+          '0.3s ease-in-out',
           style({ opacity: 1, transform: 'translateY(0)' })
         )
       )

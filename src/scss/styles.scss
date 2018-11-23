@@ -27,7 +27,7 @@ body {
 p {
   font-family: $text;
   margin-bottom: 1.3em;
-  color: #444950;
+  color: $grey;
 }
 
 h1,
@@ -36,7 +36,7 @@ h3,
 h4 {
   font-family: $title;
   margin: 1.414em 0 0.5em;
-  font-weight: inherit;
+  font-weight: 700;
   line-height: 1.2;
   color: $bold;
 }

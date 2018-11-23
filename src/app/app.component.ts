@@ -6,7 +6,7 @@ import { routerTransition } from './router.animation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [routerTransition]
+  // animations: [routerTransition]
 })
 export class AppComponent {
   name = '';
