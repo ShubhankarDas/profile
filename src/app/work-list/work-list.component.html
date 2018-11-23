@@ -1,14 +1,16 @@
 <div class="work-item-wrapper">
   <div *ngFor="let item of workItems" class="work-item-container">
-    <div [attr.id]="item.id" [attr.data-anchor]="item.anchor" class="work-text">
-      <h1>{{item.title}}</h1>
-    <a style="text-decoration: none" [routerLink]="['/project', item.id]">
-        <h5 class="underline">View product</h5>
-      </a>
-      <!-- <div class="underline"></div> -->
+    <div class="item">
+      <div [attr.id]="item.id" [attr.data-anchor]="item.anchor" class="work-text">
+        <h1>{{item.title}}</h1>
+      <a style="text-decoration: none" [routerLink]="['/project', item.id]">
+          <h5 class="underline">View product</h5>
+        </a>
+        <!-- <div class="underline"></div> -->
+      </div>
+      <ul class="work-item-link">
+      </ul>
+      <img class="work-image" [ngClass]="item.imgClass" src={{item.img}} alt="Convertfly">
     </div>
-    <ul class="work-item-link">
-    </ul>
-    <img class="work-image" [ngClass]="item.imgClass" src={{item.img}} alt="Convertfly">
   </div>
 </div>

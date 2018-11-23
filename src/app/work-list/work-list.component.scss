@@ -13,10 +13,18 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: center;
   // margin-bottom: 20em;
 
   .work-image{
     height: auto;
+  }
+
+  .item{
+    position: relative;
+    display: flex;
+    position: relative;
+    flex-direction: column;
   }
 
   &:nth-child(odd){

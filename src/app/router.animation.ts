@@ -11,13 +11,38 @@ import {
 
 const routerTransition = trigger('routerTransition', [
   transition('projectView => home', [
-    query(':enter, :leave', style({ width: '100%', position: 'absolute' }), {
+    query(':enter, :leave', style({ width: '100%', position: 'fixed' }), {
       optional: true
     }),
+    query(':enter', style({ opacity: 0 })),
+    query(':leave .hero',
+    animate('0.3s ease-in-out', style({transform: 'translateY(40px)', opacity:0}))),
+    group([
+      query(
+        ':leave .back-space',
+        animate(
+          '0.4s ease-in-out',
+          style({ transform: 'scale(3)', zIndex: 4, background: '#047bff' })
+        )
+      )
+    ]),
     query(
-      ':leave .back-space',
-      animate('0.5s ease-in-out', style({ transform: 'scale(3)', zIndex: 4 }))
-    )
+      ':enter #moon',
+      style({ opacity: 1, zIndex: 4, transform: 'scale(10)' })
+    ),
+    query(':enter .landing-wrapper', style({ opacity: 0 })),
+    query(':enter', style({ opacity: 1 })),
+    query(':leave', style({ opacity: 0 })),
+    group([
+      query(':enter #moon', [
+        style({ zIndex: 4 }),
+        animate('0.4s ease-in-out')
+      ])
+    ]),
+    query(':enter .landing-wrapper', [
+      style({ zIndex: -3, opacity: 0, transform: 'translateY(40px)' }),
+      animate('0.4s ease-in-out')
+    ])
   ]),
 
   transition('home => projectView', [
@@ -26,64 +51,38 @@ const routerTransition = trigger('routerTransition', [
     }),
     query(
       ':enter .hero',
-      style({ transform: 'translateY(200px)', opacity: '0' })
+      style({ transform: 'translateY(40px)', opacity: '0' })
     ),
     query(':enter', style({ opacity: 0 })),
     group([
-      query(
-        '#moon',
+      query('#moon', [
+        style({ zIndex: 3 }),
         animate(
-          '1s ease-in-out',
-          style({ opacity: 1, transform: 'scale(200)' })
+          '0.5s ease-in-out',
+          style({ opacity: 1, transform: 'scale(150)', zIndex: 3 })
         )
-      ),
-      query(
-        ':leave .work-text',
-        [
-          style({ transform: 'translateX(0px)', opacity: '1' }),
-          animate(
-            '0.5s ease-in-out',
-            style({
-              transform: 'translateX(60px)',
-              opacity: '0'
-            })
-          )
-        ],
-        { optional: true }
-      ),
-      query(
-        ':leave .work-image',
-        [
-          style({ transform: 'translateX(0px)', opacity: '1' }),
-          animate(
-            '0.5s ease-in-out',
-            style({
-              transform: 'translateX(-60px)',
-              opacity: '0'
-            })
-          )
-        ],
-        { optional: true }
-      )
+      ])
     ]),
     query(':leave #moon', style({ opacity: 0 })),
     query(':enter', style({ opacity: 1 })),
     group([
-      query('.back-space', [
+      query(':enter .project-wrapper', style({ boxShadow: 'none' })),
+      query(':leave', style({ opacity: 0 })),
+      query(':enter .back-space', [
         style({ transform: 'scale(2)', zIndex: 2, background: '#047bff' }),
-        animate('0.8s ease-in-out')
-      ]),
-      query(
-        ':enter .hero',
-        [
-          animate(
-            '0.8s ease-in-out',
-            style({ transform: 'translateY(0px)', opacity: '1' })
-          )
-        ],
-        { optional: true }
-      )
-    ])
+        animate('0.4s ease-in-out')
+      ])
+    ]),
+    query(
+      ':enter .hero',
+      [
+        animate(
+          '0.3s ease-in-out',
+          style({ transform: 'translateY(0px)', opacity: '1' })
+        )
+      ],
+      { optional: true }
+    )
   ]),
 
   transition('* => home', [
@@ -95,15 +94,6 @@ const routerTransition = trigger('routerTransition', [
       '.landing-left, .landing-right',
       style({ opacity: 0, transform: 'translateY(30px)' })
     ),
-    // group([
-    //   query(':enter ', [
-    //     style({ opacity: 0, transform: 'scale(0.9) translateY(-50px)' }),
-    //     animate(
-    //       '0.8s ease-in-out',
-    //       style({ opacity: 1, transform: 'scale(1) translateY(0)' })
-    //     )
-    //   ])
-    // ]),
     query('#moon', animate('0.8s ease-in-out')),
     query(
       '.landing-right',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private router: Router) {}
 
   updateMoon(section) {
     let moon = document.getElementById('moon');
@@ -79,5 +80,6 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
     this.titleService.setTitle('Shubhankar Das');
+    console.log(this.router.url)
   }
 }
