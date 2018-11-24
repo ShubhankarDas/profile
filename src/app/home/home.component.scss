@@ -25,6 +25,10 @@
 {
   .main-wrapper{
     width: 90%;
+
+    &:before{
+      display: none;
+    }
   }
 }
 

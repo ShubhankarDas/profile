@@ -6,42 +6,36 @@
   height: 100px;
   font-size: 1.2em;
 }
-.contactMe,
-.navIcons {
-  flex: 1;
-}
 
 .navIcons {
   text-align: right;
-      margin-right: 100px;
+  flex: 1;
+  margin-right: 100px;
 
 }
 
-.navIcons a,
-.contactMe a{
+.navIcons a{
   display: inline-block;
   vertical-align: middle;
   transition: all 0.3s;
-}
-
-.navIcons a {
   margin-left: 40px;
-}
 
-.navIcons a i{
-  padding: 3px;
-}
-
-.contactMe a {
-  color: $light-grey;
-  text-decoration: none;
-
-  &:hover{
-    color:$accent-blue;
+  i {
+    padding: 3px;
   }
 }
 
 .navIcons a:hover{
   cursor: pointer;
   color:$accent-blue;
+}
+
+@media(max-width:840px){
+  .navIcons{
+    margin: 0;
+
+    a:hover {
+      color: inherit;
+    }
+  }
 }
