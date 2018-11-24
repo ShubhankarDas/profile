@@ -21,6 +21,33 @@
   }
 }
 
+@media(max-width:840px)
+{
+  .main-wrapper{
+    width: 90%;
+  }
+}
+
+// -------------- Landing --------
+
+.landing {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin-top: -50px;
+  }
+}
+@media(max-width:840px){
+  .landing{
+    h1{
+      font-size: 46px;
+    }
+  }
+}
+
 // ----------- Self Info -------------
 
 .self-info {
@@ -65,11 +92,16 @@
   }
 }
 
+@media(max-width:840px){
+  .self-info{
+    flex-direction: column-reverse;
+  }
+}
 
 //----------  For work section -------------
 
 .work{
-
+  margin-bottom: 40px;
 }
 
 .work-wrapper{
@@ -133,3 +165,51 @@
   color:#a3afbf;
 }
 
+@media(max-width:840px){
+  .card {
+    width: 100%;
+  }
+  .work-wrapper {
+    justify-content: center;
+  }
+}
+
+// --------- footer --------
+
+.footer{
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+
+  a{
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.social-container{
+  a{
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+      color: $accent-blue;
+    }
+  }
+}
+
+.made{
+  font-size: 14px;
+
+  a{
+    font-size: inherit;
+    color: $accent-blue;
+  }
+}
+
+@media(max-width:840px){
+
+}
