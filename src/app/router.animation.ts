@@ -46,7 +46,7 @@ const routerTransition = trigger('routerTransition', [
   ]),
 
   transition('home => projectView', [
-    query(':enter, :leave', style({ width: '100%' }), {
+    query(':enter, :leave', style({ width: '100%', position: 'fixed' }), {
       optional: true
     }),
     query(':enter', style({opacity: 0})),

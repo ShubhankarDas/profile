@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SideTabComponent } from './side-tab/side-tab.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectViewerComponent } from './project-viewer/project-viewer.component';
+import { FadeInDirective } from './directives/fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProjectViewerComponent } from './project-viewer/project-viewer.componen
     WorkListComponent,
     SideTabComponent,
     FooterComponent,
-    ProjectViewerComponent
+    ProjectViewerComponent,
+    FadeInDirective
   ],
   imports: [
     BrowserAnimationsModule,

@@ -14,17 +14,10 @@
   height: 100%;
   margin: 0 auto auto;
   padding-bottom: 40px;
-
-  // h1,h2,h3,h4{
-  //   color: #575d65;
-  // }
-
-  // p{
-  //   margin-bottom: 40px;
-  // }
 }
 
 .close{
+  z-index: 5;
   cursor: pointer;
   position: fixed;
   padding: 10px;

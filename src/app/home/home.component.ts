@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -11,13 +11,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle('Shubhankar Das');
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop;
-    const scrollPosition = window.pageYOffset;
-
-    console.log(componentPosition + ' ' + scrollPosition );
   }
 }

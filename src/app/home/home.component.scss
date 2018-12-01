@@ -183,6 +183,26 @@ section{
   }
 }
 
+//----------- Code pen work ----------
+
+.code-pen-work{
+  .desc{
+    max-width: 500px;
+  }
+}
+
+.code-pen-card{
+  border:none !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.no-border{
+  border:none !important;
+}
+
 // --------- footer --------
 
 .footer{

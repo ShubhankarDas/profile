@@ -3,14 +3,14 @@
     <a class="close" (click)="backClicked()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
     <div [ngSwitch]="projectName">
       <!-- <div class="back-space" [style.background-color]="project.background"></div> -->
-      <div class="hero">
+<div class="hero" appFadeIn>
         <h2 class="hero-text">{{ project.title }}</h2>
         <div [ngClass]="project.imgContainer" class="hero-image">
           <img [ngClass]="project.imgClass" src={{project.heroImage}} />
         </div>
       </div>
-      <div *ngSwitchCase="'convertfly'">
-        <div class="content">
+      <div *ngSwitchCase="'convertfly'" >
+<div class="content" appFadeIn>
           <div class="para-wrapper">
             <h3>About</h3>
             <p>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div *ngSwitchCase="'visualgator'">
-        <div class="content">
+<div class="content" appFadeIn>
           <div class="para-wrapper">
             <h3>About</h3>
             <p>
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div *ngSwitchCase="'skillsalpha'">
-        <div class="content">
+<div class="content" appFadeIn>
           <div class="para-wrapper">
             <h3>About</h3>
             <p>
@@ -126,7 +126,7 @@
         </div>
       </div>
       <div *ngSwitchCase="'yoola'">
-        <div class="content">
+<div class="content" appFadeIn>
           <div class="para-wrapper">
             <h3>About</h3>
             <p>

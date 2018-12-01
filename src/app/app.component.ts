@@ -6,10 +6,9 @@ import { routerTransition } from './router.animation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // animations: [routerTransition]
+  animations: [routerTransition]
 })
 export class AppComponent {
-  name = '';
 
   constructor(private titleService: Title) {}
 
@@ -18,6 +17,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.titleService.setTitle('My awesome app');
+    this.titleService.setTitle('Shubhankar Das');
   }
 }
